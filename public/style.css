@@ -1,0 +1,534 @@
+/* GENEL */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+color: white;
+}
+
+body{
+   position: relative;
+
+   z-index: index 1;;
+}
+
+/* HEADER */
+header {
+background: rgba(0, 0, 0, 0.6);
+padding: 20px 40px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+header h1 {
+font-size: 22px;
+letter-spacing: 2px;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+margin-left: 20px;
+font-weight: 500;
+transition: 0.3s;
+}
+
+nav a:hover {
+   nav ul li a{
+position:relative;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+
+nav ul li a:hover::after{
+width:100%;
+}
+
+color: #00f2ff;
+}
+
+/* SECTIONS */
+section {
+padding: 60px 40px;
+text-align: center;
+}
+
+/* KART TASARIM */
+.product,
+.cart,
+.appointment-section,
+.admin-section {
+background: rgba(255, 255, 255, 0.08);
+padding: 25px;
+margin: 20px;
+border-radius: 15px;
+box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+/* ÜRÜNLER */
+.products {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+.product {
+width: 250px;
+transition: 0.4s;
+}
+
+.product:hover {
+transform: translateY(-10px);
+}
+
+/* BUTON */
+button,
+.btn {
+background: linear-gradient(45deg, #00f2ff, #00c6ff);
+border: none;
+padding: 10px 20px;
+margin-top: 10px;
+color: black;
+font-weight: bold;
+border-radius: 30px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+button:hover,
+.btn:hover {
+transform: scale(1.05);
+}
+
+/* FORM */
+input,
+textarea,
+select {
+width: 100%;
+padding: 10px;
+margin: 8px 0;
+border-radius: 8px;
+border: none;
+outline: none;
+}
+
+/* SEPET */
+.cart {
+margin-top: 40px;
+}
+
+/* ADMIN */
+.admin-section {
+max-width: 900px;
+margin: auto;
+}
+
+.main-header {
+background: #111;
+padding: 10px 0;
+}
+
+.container {
+width: 90%;
+margin: auto;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.logo-area img {
+height: 100px;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+margin-left: 25px;
+font-weight: 500;
+transition: 0.3s;
+}
+
+nav a:hover {
+color: orange;
+}
+
+.admin-container {
+display: flex;
+gap: 40px;
+padding: 40px;
+}
+
+.admin-box {
+flex: 1;
+background: rgba(255, 255, 255, 0.08);
+border-radius: 15px;
+padding: 25px;
+box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+color: white;
+}
+
+.admin-box h2 {
+margin-bottom: 20px;
+color: #ff8c00;
+}
+
+.card {
+background: white;
+border-radius: 10px;
+padding: 15px;
+margin-bottom: 15px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+transition: 0.3s;
+}
+
+.card:hover {
+transform: translateY(-5px);
+}
+
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: #0f2027;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh ;
+}
+
+/* HEADER */
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 40px;
+background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.logo-area {
+display: flex;
+align-items: center;
+
+}
+
+.logo {
+height: 100px;
+margin-right: 20px;
+margin-left: 40px;
+font-size: 30px;
+font-weight: bold;
+color: #f4b400;
+text-decoration: none;
+background: transparent;
+padding: 0;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+margin-left: 25px;
+font-weight: 500;
+transition: 0.3s;
+}
+
+nav a:hover {
+color: #ffcc00;
+}
+
+/* DASHBOARD */
+main {
+padding: 40px;
+}
+
+.dashboard h2 {
+margin-bottom: 20px;
+}
+
+.card {
+background: white;
+color: black;
+padding: 20px;
+margin-bottom: 15px;
+border-radius: 8px;
+}
+
+footer {
+text-align: center;
+padding: 15px;
+background: #111;
+margin-top: 40px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .form-box {
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ .admin-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+ }
+
+ .bekliyor {
+background-color: orange;
+color: white;
+padding: 5px 10px;
+border-radius: 6px;
+font-size: 12px;
+}
+
+.onaylandi {
+background-color: green;
+color: white;
+padding: 5px 10px;
+border-radius: 6px;
+font-size: 12px;
+}
+
+.iptal {
+background-color: red;
+color: white;
+padding: 5px 10px;
+border-radius: 6px;
+font-size: 12px;
+}
+
+.hero{
+height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+}
+
+.hero-content{
+background: rgba(255,255,255,0.05);
+padding:50px;
+border-radius:15px;
+border:1px solid rgba(255,153,0,0.3);
+box-shadow:0 0 40px rgba(255,153,0,0.4);
+animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+.hero button{
+animation: pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 10px #ff9900;}
+50%{box-shadow:0 0 25px #ff9900;}
+100%{box-shadow:0 0 10px #ff9900;}
+}
+
+.team-section {
+padding: 80px 20px;
+background: #111;
+text-align: center;
+}
+
+.team-section h2 {
+color: orange;
+font-size: 32px;
+margin-bottom: 40px;
+}
+
+.team-container {
+display: flex;
+justify-content: center;
+gap: 40px;
+flex-wrap: wrap;
+}
+
+.team-card {
+background: #1a1a1a;
+padding: 20px;
+border-radius: 15px;
+width: 280px;
+transition: 0.3s;
+box-shadow: 0 0 15px rgba(255,165,0,0.2);
+}
+
+.team-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 0 25px rgba(255,165,0,0.6);
+}
+
+.team-card img {
+width: 100%;
+border-radius: 10px;
+}
+
+.team-card p {
+color: #fff;
+margin-top: 15px;
+}
+
+
+.ekip-card:hover {
+transform: translateY(-12px);
+box-shadow: 0 0 25px rgba(255,140,0,0.7);
+}
+
+
+.ekip-card img {
+width: 100%;
+border-radius: 8px;
+margin-bottom: 15px;
+}
+
+.ekip-card h3 {
+color: #ffb300;
+margin-bottom: 10px;
+}
+
+.ekip-card p {
+font-size: 14px;
+color: #ccc;
+}
+
+.services {
+background: #0f0f0f;
+padding: 80px 20px;
+text-align: center;
+color: white;
+}
+
+.services h2 {
+color: orange;
+margin-bottom: 50px;
+font-size: 28px;
+}
+
+.service-container {
+display: flex;
+justify-content: center;
+gap: 40px;
+flex-wrap: wrap;
+}
+
+.service-card {
+background: #1a1a1a;
+width: 280px;
+padding: 30px;
+border-radius: 12px;
+transition: 0.3s;
+border: 1px solid rgba(255,165,0,0.2);
+}
+
+.service-card:hover {
+transform: translateY(-8px);
+border: 1px solid orange;
+box-shadow: 0 0 20px rgba(255,165,0,0.4);
+}
+
+.service-card h3 {
+color: orange;
+margin-bottom: 15px;
+}
+
+.service-card p {
+color: #ccc;
+font-size: 14px;
+}
+/* SAYDAM LOGO ARKA PLAN */
+body::before {
+content: "";
+position: fixed;
+top: 50%;
+left: 50%;
+width: 500px;
+height: 500px;
+background: url("images/logo.png") center/contain no-repeat;
+transform: translate(-50%, -50%);
+opacity: 0.15; /* Saydamlık */
+z-index: 0;
+pointer-events: none;
+}
+/* ARKA PLAN EKİP GÖRSELLERİ */
+body::after {
+content: "";
+position: fixed;
+bottom: 50px;
+right: 50px;
+width: 350px;
+height: 350px;
+background: url("images/ekip1.jpg") center/cover no-repeat;
+opacity: 0.07;
+z-index: 0;
+pointer-events: none;
+border-radius: 20px;
+}
+
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 40px;
+background: #111;
+}
+
+.nav-left,
+
+.nav-right a i {
+   margin-right: 8px;
+   font-size: 16px;
+list-style: none;
+display: flex;
+align-items: center;
+gap: 20px;
+}
+
+.navbar a {
+text-decoration: none;
+color: white;
+transition: 0.3s;
+}
+
+.navbar a:hover {
+color: orange;
+}
+
+.logo img{
+height: 100px;
+width: auto;
+display: block;
+}
+.mail-link {
+
+   color: white;
+   text-decoration: none;
+   font-size: 14px;
+}
+
+.mail-link:hover {
+
+   color: #f4b400;
+}
+
+.whatsapp-btn:hover {
+   background-color: #1ebe5d;
+}
+
