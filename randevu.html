@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Randevu Al | E.K.A ELEKTRİK</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<header class="main-header">
+<div class="container">
+<div class="logo-area">
+<img src="images/logo.png" alt="E.K.A Elektrik Logo">
+</div>
+
+<div id="appointmentsList"></div>
+
+<div id="ordersList"></div>
+</div>
+
+</div>
+<nav>
+<a href="index.html">Ana Sayfa</a>
+<a href="randevu.html">Randevu Al</a>
+<a href="urunler.html">Ürünler</a>
+</nav>
+</div>
+</header>
+
+<section class="appointment-section">
+<h2>Usta Çağır</h2>
+
+<form action="/randevu" method="post">
+
+<div class="form-group">
+<label>Ad</label>
+<input type="text" name="ad" required>
+</div>
+
+<div class="form-group">
+<label>Soyad</label>
+<input type="text" name="soyad" required>
+</div>
+
+<div class="form-group">
+<label>Telefon</label>
+<input type="tel" name="telefon" required>
+</div>
+
+<div class="form-group">
+<label>Adres</label>
+<textarea name="adres" required></textarea>
+</div>
+
+<div class="form-group">
+<label>Arıza Açıklaması</label>
+<textarea name="ariza" required></textarea>
+</div>
+
+<div class="form-group">
+<label>Tarih</label>
+<input type="date" name="tarih" required>
+</div>
+
+<div class="form-group">
+<label>Saat</label>
+<input type="time" name="saat" required>
+</div>
+
+<div class="form-group">
+<label>Ödeme Türü</label>
+<select id="odeme">
+<option value="kapida">Kapıda Ödeme</option>
+<option value="online">Online Ödeme</option>
+</select>
+</div>
+
+<button type="submit" class="btn">Randevu Oluştur</button>
+
+</form>
+</section>
+
+<footer>
+<p>© 2026 E.K.A ELEKTRİK - Tüm Hakları Saklıdır</p>
+</footer>
+
+
+<!-- SCRIPT EN ALTA -->
+<script src="app.js"></script>
+
+</body>
+</html>

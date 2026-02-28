@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Ürünler | E.K.A ELEKTRİK</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<header class="main-header">
+<div class="container">
+<div class="logo-area">
+<img src="images/logo.png" alt="E.K.A Elektrik Logo">
+</div>
+<div class="admin-container">
+
+<div class="admin-box">
+<h2>Gelen Randevular</h2>
+<div id="appointmentsList"></div>
+</div>
+
+<div class="admin-box">
+<h2>Gelen Siparişler</h2>
+<div id="ordersList"></div>
+</div>
+
+</div>
+
+<nav>
+<a href="index.html">Ana Sayfa</a>
+<a href="randevu.html">Randevu Al</a>
+<a href="urunler.html">Ürünler</a>
+<a href="admin.html">Admin</a>
+</nav>
+</div>
+</header>
+
+<section class="products">
+<h2>Ürünler</h2>
+
+<div class="product">
+<h3>LED Ampul</h3>
+<p>Fiyat: 50₺</p>
+<button onclick="addToCart('LED Ampul', 50)">Sepete Ekle</button>
+</div>
+
+<div class="product">
+<h3>Priz</h3>
+<p>Fiyat: 30₺</p>
+<button onclick="addToCart('Priz', 30)">Sepete Ekle</button>
+</div>
+
+<div class="product">
+<h3>Sigorta</h3>
+<p>Fiyat: 80₺</p>
+<button onclick="addToCart('Sigorta', 80)">Sepete Ekle</button>
+</div>
+
+</section>
+
+<section class="cart">
+<h2>Sepet</h2>
+<div id="cartList"></div>
+<h3 id="totalPrice">Toplam: 0₺</h3>
+<button onclick="checkout()"class="btn">Ödeme Yap</button>
+</section>
+
+<!-- Ödeme Modal -->
+<div id="paymentModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6);">
+
+<div style="background:white; width:400px; margin:100px auto; padding:25px; border-radius:10px; text-align:center;">
+<h3>Kart Bilgileri</h3>
+
+<input type="text" id="cardName" placeholder="Kart Üzerindeki İsim" style="width:100%; margin:8px 0; padding:10px;">
+
+<input type="text" id="cardNumber" maxlength="19"
+placeholder="1234 5678 9012 3456"
+style="width:100%; margin:8px 0; padding:10px;">
+
+<input type="text" id="cardDate" placeholder="AA/YY"
+maxlength="5"
+style="width:100%; margin:8px 0; padding:10px;">
+
+<input type="text" id="cardCvv"
+maxlength="3"
+placeholder="CVV"
+style="width:100%; margin:8px 0; padding:10px;">
+
+<button onclick="completePayment()" style="margin-top:10px; padding:10px 20px;">Ödemeyi Tamamla</button>
+<button onclick="closePayment()" style="margin-top:10px; padding:10px 20px;">İptal</button>
+
+<p id="paymentStatus" style="margin-top:15px; font-weight:bold;"></p>
+</div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

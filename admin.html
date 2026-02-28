@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Admin Panel</title>
+
+<style>
+body {
+font-family: Arial, sans-serif;
+background: #f4f6f9;
+padding: 20px;
+}
+
+h1 {
+text-align: center;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+background: white;
+}
+
+th, td {
+padding: 10px;
+border: 1px solid #ddd;
+text-align: center;
+}
+
+th {
+background: #2c3e50;
+color: white;
+}
+
+.status-waiting {
+color: orange;
+font-weight: bold;
+}
+
+.status-approved {
+color: green;
+font-weight: bold;
+}
+
+.pay-btn {
+background: #27ae60;
+color: white;
+border: none;
+padding: 6px 12px;
+cursor: pointer;
+border-radius: 4px;
+}
+
+.pay-btn:hover {
+background: #219150;
+}
+</style>
+</head>
+<body>
+
+<h1>Randevular</h1>
+
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Ad</th>
+<th>Telefon</th>
+<th>Hizmet</th>
+<th>Tarih</th>
+<th>Durum</th>
+<th>Ödeme</th>
+</tr>
+</thead>
+<tbody id="appointmentsBody">
+</tbody>
+</table>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+const tbody = document.getElementById("appointmentsBody");
+
+fetch("http://localhost:3000/appointments")
+.then(res => res.json())
+.then(data => {
+
+tbody.innerHTML = "";
+
+data.forEach(item => {
+
+let statusClass = "";
+if (item.status === "bekliyor") {
+statusClass = "status-waiting";
+}
+else if (item.status === "onaylandı") {
+statusClass = "status-approved";
+}
+
+let formatliTarih = "";
+if (item.appointment_date) {
+const tarih = new Date(item.appointment_date);
+formatliTarih = tarih.toLocaleDateString("tr-TR");
+}
+
+let row = `
+<tr>
+<td>${item.id}</td>
+<td>${item.name}</td>
+<td>${item.phone}</td>
+<td>${item.service}</td>
+<td>${formatliTarih}</td>
+<td class="${statusClass}">${item.status}</td>
+<td style="font-weight:bold;color:${item.payment_status==='Odendi'? 'green': 'red'}">
+    ${item.payment_status=== 'Odendi' ? 'Ödendi' : 'Ödenmedi'}
+    </td>
+</tr>
+`;
+
+tbody.innerHTML += row;
+
+});
+
+})
+.catch(err => console.error("HATA:", err));
+
+});
+
+
+function odemeBaslat(appointmentId){
+
+fetch("http://localhost:3000/create-payment", {
+method: "POST",
+headers: {
+"Content-Type": "application/json"
+},
+body: JSON.stringify({
+type: "appointment",
+referenceId: appointmentId,
+amount: 500
+})
+})
+.then(res => res.text()) // ⚠️ JSON değil TEXT
+.then(html => {
+
+if(!html){
+alert("Sunucudan cevap gelmedi!");
+return;
+}
+
+// HTML ödeme sayfasını aç
+document.open();
+document.write(html);
+document.close();
+
+})
+.catch(err => {
+console.error("Ödeme hatası:", err);
+alert("Ödeme başlatılamadı!");
+});
+
+}
+
+function adminKontrol(req,res,next){
+    if (req.session.admin){
+        next();
+    }
+    else {
+        res.redirect("/admin-login.html");
+
+    }
+    app.get("/admin.html",adminKontrol,(req,res)=>{
+        res.sendFile(__dirname + "/public/admin.html");
+    });
+}
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background-color: #0f0f0f;
+padding-top: 80px;
+}
+
+/* NAVBAR */
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 40px;
+background: linear-gradient(90deg, #111, #1a1a1a);
+box-shadow: 0 2px 10px rgba(255,165,0,0.3);
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1000;
+}
+
+.logo {
+color: orange;
+height: 60px;;
+font-size: 60px;
+font-weight: bold;
+letter-spacing: 2px;
+margin-right: 10px;
+margin-left: 90px;
+}
+
+.nav-links {
+list-style: none;
+display: flex;
+gap: 25px;
+}
+
+.nav-links a {
+text-decoration: none;
+color: white;
+font-weight: 500;
+transition: 0.3s;
+}
+
+.nav-links a:hover {
+color: orange;
+}
+</style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E.K.A Elektrik</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+background: linear-gradient(135deg,#000000,#111111);
+color:white;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 50px;
+background:#000;
+border-bottom:2px solid #ff9900;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav img{
+height:50px;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:30px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#ff9900;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+padding: 100px 20px;
+color: white;
+overflow: hidden;
+background: #000;
+}
+
+.hero::before{
+content:"";
+background:url("logo.png") no-repeat center;
+background: url("images/ekip1.jpg")center/cover no-repeat;
+background-size:400px;
+opacity:0.08;
+position:absolute;
+top: 40px;  
+left: 80px;
+width: 250px;
+height: 250px;
+right:0;
+bottom:0;
+border-radius: 15px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 30px;
+    right: 80px;
+    width: 250px;
+    height: 250px;
+    background: url("images/ekip2.jpg") center/cover no-repeat;
+    opacity: 0.08;
+    border-radius: 15px;
+}
+
+.hero h1{
+font-size:50px;
+color:#ff9900;
+z-index:1;
+}
+
+.hero p{
+font-size:22px;
+margin-top:15px;
+z-index:1;
+}
+
+.hero button{
+margin-top:25px;
+padding:15px 35px;
+background:#ff9900;
+border:none;
+color:black;
+font-weight:bold;
+cursor:pointer;
+border-radius:5px;
+transition:0.3s;
+z-index:1;
+}
+
+.hero button:hover{
+background:#ffaa33;
+}
+
+/* SERVICES */
+
+.services{
+padding:80px 50px;
+text-align:center;
+}
+
+.services h2{
+color:#ff9900;
+margin-bottom:40px;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.card{
+background:#111;
+padding:30px;
+width:280px;
+border:1px solid #222;
+border-radius:10px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border:1px solid #ff9900;
+}
+
+.card h3{
+color:#ff9900;
+margin-bottom:15px;
+}
+
+/* TEAM */
+
+.team{
+padding:80px 50px;
+background:#0a0a0a;
+text-align:center;
+}
+
+.team h2{
+color:#ff9900;
+margin-bottom:40px;
+}
+
+.team-card{
+background:#111;
+padding:20px;
+width:220px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.team-card img{
+width:100%;
+border-radius:10px;
+}
+
+.team-card:hover{
+transform:scale(1.05);
+}
+
+.team-container{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+footer{
+background:#000;
+padding:20px;
+text-align:center;
+border-top:1px solid #222;
+color:#777;
+}
+</style>
+</head>
+
+<body>
+<nav class="navbar">
+
+<ul class="nav-left">
+<li><a href="/">Ana Sayfa</a></li>
+    <li><a href="/urunler.html">Ürünler</a></li>
+</a></li>
+</ul>
+
+<div class="logo">
+<img src="logo.png" alt="Logo">
+</div>
+
+<ul class="nav-right">
+    <li><a href="https://wa.me/905336404624" target="_blank" class="whatsapp-btn">
+       <i class="fa-brands fa-whatsapp"></i>
+    WhatsApp 
+    <li><a href="mailto:e.k.a.elektrik46@gmail.com"class="mail-link">
+        <i class="fa-solid fa-envelope"></i>
+    
+        e.k.a.elektrik46@gmail.com
+    </a></li>
+</ul>
+
+</nav>
+    <section class="hero">
+<div class="hero-content">
+<h1>E.K.A Elektrik</h1>
+<p>Güvenli • Hızlı • Profesyonel Çözümler</p>
+<button onclick="location.href='/randevu.html'">Randevu Oluştur</button>
+</div>
+</section>
+
+<section class="services">
+<h2>Hizmetlerimiz</h2>
+
+<div class="service-container">
+
+<div class="service-card">
+<h3>Elektrik Tesisatı</h3>
+<p>Ev ve iş yerleri için güvenli ve profesyonel tesisat çözümleri.</p>
+</div>
+
+<div class="service-card">
+<h3>Arıza & Bakım</h3>
+<p>Hızlı müdahale ve uzman teknik servis desteği.</p>
+</div>
+
+<div class="service-card">
+<h3>Pano & Montaj</h3>
+<p>Endüstriyel ve bireysel pano kurulum hizmetleri.</p>
+</div>
+
+</div>
+</section>
+    
+<nav>
+<img src="logo.png" alt="Logo">
+<img src="images/ekip1.jpg">
+<img src="images/ekip2.jpg">
+<img src="images/ekip3.jpg" alt="Elektrik Panosu">
+</nav>
+
+<section class="services">
+<h2>Hizmetlerimiz</h2>
+<div class="cards">
+<div class="card">
+<h3>Elektrik Arıza</h3>
+<p>7/24 hızlı müdahale ve çözüm.</p>
+</div>
+<div class="card">
+<h3>Tesisat Kurulum</h3>
+<p>Ev ve iş yerleri için profesyonel kurulum.</p>
+</div>
+<div class="card">
+<h3>Bakım & Onarım</h3>
+<p>Uzun ömürlü ve güvenli sistemler.</p>
+</div>
+</div>
+</section>
+
+<section class="team">
+<h2>Ekibimiz</h2>
+<div class="team-container">
+<div class="team-card">
+<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="">
+<h4>Elektrik Ustası</h4>
+</div>
+<div class="team-card">
+<img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6" alt="">
+<h4>Teknik Destek</h4>
+</div>
+<div class="team-card">
+<img src="https://images.unsplash.com/photo-1581090700227-4c4f50b4b0a3" alt="">
+<h4>Montaj Uzmanı</h4>
+</div>
+<div class="team-card">
+<img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61" alt="">
+<h4>Proje Sorumlusu</h4>
+</div>
+</div>
+</section>
+
+<section class="team-section">
+<h2>Sahada Profesyonel Ekibimiz</h2>
+
+<div class="team-container">
+
+<div class="team-card">
+<img src="images/ekip1.jpg" alt="Elektrik Panosu">
+<p>Elektrik Panosu Montajı</p>
+</div>
+
+<div class="team-card">
+<img src="images/ekip2.jpg" alt="Kablo Döşeme">
+<p>Kablo Döşeme ve Tesisat</p>
+</div>
+
+<div class="team-card">
+<img src="images/ekip3.jpg" alt="Ölçüm">
+<p>Profesyonel Ölçüm ve Test</p>
+</div>
+
+</div>
+</section>
+
+
+<footer>
+© 2026 E.K.A Elektrik - Tüm Hakları Saklıdır
+</footer>
+
+
+
+</body>
+</html>
